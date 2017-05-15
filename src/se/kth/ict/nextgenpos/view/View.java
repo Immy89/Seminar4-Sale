@@ -1,6 +1,7 @@
 package se.kth.ict.nextgenpos.view;
 
 import se.kth.ict.nextgenpos.controller.Controller;
+import se.kth.ict.nextgenpos.model.ItemIdDoesNotExistException;
 
 /**
  * A placeholder for the view.
@@ -20,20 +21,25 @@ public class View {
      * Simulates a view. Makes some calls to the controller.
      */
     public void test() {
-	cont.makeNewSale();
-	enterItem(1);
-	System.out.println(">>>>> NOTE!!\n" +
+		cont.makeNewSale();
+		enterItem(1);
+		System.out.println(">>>>> NOTE!!\n" +
 			   "A null pointer exception will follow since there is no handling" + 
 			   " of non-existing item ids. When you have implemented exception" +
 			   " handling, there should be some informative printout instead of the" +
 			   " exception stack trace.");
-	enterItem(10);
+		enterItem(10);
     }
 
     private void enterItem(int itemId) {
-	int quantity = 1;
-	System.out.println("");
-	System.out.println("Result for item " + itemId + ": " + cont.enterItem(itemId, quantity));
-	System.out.println("");
+		try{
+			int quantity = 1;
+			System.out.println("");
+			System.out.println("Result for item " + itemId + ": " + cont.enterItem(itemId, quantity));
+			System.out.println("");
+		}
+		catch(ItemIdDoesNotExistException e){
+			System.out.println("Item does not exist");
+		}
     }
 }

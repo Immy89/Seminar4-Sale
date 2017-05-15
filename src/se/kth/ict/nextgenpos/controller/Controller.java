@@ -1,9 +1,6 @@
 package se.kth.ict.nextgenpos.controller;
 
-import se.kth.ict.nextgenpos.model.Sale;
-import se.kth.ict.nextgenpos.model.Receipt;
-import se.kth.ict.nextgenpos.model.ProductCatalog;
-import se.kth.ict.nextgenpos.model.ProductSpecification;
+import se.kth.ict.nextgenpos.model.*;
 
 /**
  * The controller of the application. This is the sole controller, all calls to the
@@ -40,13 +37,13 @@ public class Controller {
      * @return               Information about the entered item.
      * @throws IllegalStateException If this method is called before makeNewSale().
      */
-    public ProductSpecification enterItem(int itemId, int quantity) {
-	if (sale == null) {
-	    throw new IllegalStateException("enterItem() called before makeNewSale()");
-	}
-	ProductSpecification spec = catalog.findSpecification(itemId);
-	sale.addItem(spec, quantity);
-	return spec;
+    public ProductSpecification enterItem(int itemId, int quantity) throws ItemIdDoesNotExistException {
+	    if (sale == null) {
+	        throw new IllegalStateException("enterItem() called before makeNewSale()");
+	    }
+	    ProductSpecification spec = catalog.findSpecification(itemId);
+	    sale.addItem(spec, quantity);
+	    return spec;
     }
 
     /**

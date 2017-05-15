@@ -28,7 +28,11 @@ public class ProductCatalog {
      * @param    itemId The item to look for
      * @return          The specification for the found item or null if no item was found.
      */
-    public ProductSpecification findSpecification(int itemId) {
-	    return products.get(itemId);
+    public ProductSpecification findSpecification(int itemId) throws ItemIdDoesNotExistException
+	{
+		if (products.get(itemId) == null){
+			throw new ItemIdDoesNotExistException("Item does not exist");
+		}
+		return products.get(itemId);
     }
 }

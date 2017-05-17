@@ -6,8 +6,8 @@ import java.util.HashMap;
 /**
  * This class is responsible for all access to the product database.
  */ 
-public class ProductCatalog { 
-    private Map<Integer, ProductSpecification> products = 
+public class ProductCatalog {
+    private Map<Integer, ProductSpecification> products =
 	new HashMap<Integer, ProductSpecification>();
 
     /**
@@ -27,11 +27,12 @@ public class ProductCatalog {
      *
      * @param    itemId The item to look for
      * @return          The specification for the found item or null if no item was found.
+	 * @throws ItemIdDoesNotExistException If itemId does not exist.
      */
     public ProductSpecification findSpecification(int itemId) throws ItemIdDoesNotExistException
 	{
 		if (products.get(itemId) == null){
-			throw new ItemIdDoesNotExistException("Item does not exist");
+			throw new ItemIdDoesNotExistException(itemId);
 		}
 		return products.get(itemId);
     }

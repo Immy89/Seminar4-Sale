@@ -2,12 +2,14 @@ package se.kth.ict.nextgenpos.view;
 
 import se.kth.ict.nextgenpos.controller.Controller;
 import se.kth.ict.nextgenpos.model.ItemIdDoesNotExistException;
+import java.util.logging.*;
 
 /**
  * A placeholder for the view.
  */
 public class View {
     private Controller cont;
+    private static final Logger LOGGER = Logger.getLogger( ItemIdDoesNotExistException.class.getName() );
 
     /**
      * Creates a new <code>View</code>.
@@ -31,6 +33,7 @@ public class View {
 		enterItem(10);
     }
 
+    
     private void enterItem(int itemId) {
 		try{
 			int quantity = 1;
@@ -39,7 +42,7 @@ public class View {
 			System.out.println("");
 		}
 		catch(ItemIdDoesNotExistException e){
-			System.out.println("Item does not exist");
+            LOGGER.log( Level.INFO, e.toString(), e );
 		}
     }
 }

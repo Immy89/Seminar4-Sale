@@ -1,14 +1,23 @@
 package se.kth.ict.nextgenpos.model;
 
 /**
- *
+ * Exception for when an item id does not exist
  */
 public class ItemIdDoesNotExistException extends Exception{
-    private String message;
+    private int itemId;
 
-    public ItemIdDoesNotExistException(String message){}
+    /**
+     * @param itemId
+     */
+    public ItemIdDoesNotExistException(int itemId){
+        this.itemId = itemId;
+    }
 
+    /**
+     * @return
+     */
+    @Override
     public String getMessage(){
-        return this.message;
+        return "Item id " + itemId + " does not exist";
     }
 }

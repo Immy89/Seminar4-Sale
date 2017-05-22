@@ -1,11 +1,20 @@
-maj 17, 2017 6:15:40 EM se.kth.ict.nextgenpos.view.View enterItem
+maj 22, 2017 11:06:28 EM se.kth.ict.nextgenpos.view.View stateHasChanged
+INFO: Product id: 1, name: low fat milk, price:10
+description: a very long description, a very long description, a very long description
+maj 22, 2017 11:06:28 EM se.kth.ict.nextgenpos.view.View stateHasChanged
+INFO: Product id: 2, name: butter, price:10
+description: a very long description, a very long description, a very long description
+maj 22, 2017 11:06:28 EM se.kth.ict.nextgenpos.view.View stateHasChanged
+INFO: Product id: 3, name: bread, price:10
+description: a very long description, a very long description, a very long description
+maj 22, 2017 11:06:28 EM se.kth.ict.nextgenpos.view.View enterItem
 INFO: se.kth.ict.nextgenpos.model.ItemIdDoesNotExistException: Item id 10 does not exist
 se.kth.ict.nextgenpos.model.ItemIdDoesNotExistException: Item id 10 does not exist
-	at se.kth.ict.nextgenpos.model.ProductCatalog.findSpecification(ProductCatalog.java:36)
-	at se.kth.ict.nextgenpos.controller.Controller.enterItem(Controller.java:45)
-	at se.kth.ict.nextgenpos.view.View.enterItem(View.java:40)
-	at se.kth.ict.nextgenpos.view.View.test(View.java:33)
-	at se.kth.ict.nextgenpos.startup.Main.main(Main.java:33)
+	at se.kth.ict.nextgenpos.model.ProductCatalog.findSpecification(ProductCatalog.java:50)
+	at se.kth.ict.nextgenpos.controller.Controller.enterItem(Controller.java:49)
+	at se.kth.ict.nextgenpos.view.View.enterItem(View.java:46)
+	at se.kth.ict.nextgenpos.view.View.test(View.java:38)
+	at se.kth.ict.nextgenpos.startup.Main.main(Main.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -16,6 +16,10 @@ public class Controller {
     public Controller() {
 	catalog = new ProductCatalog();
     }
+
+    public ProductCatalog getCatalog(){
+        return catalog;
+    }
     
     /**
      * Initiates a new sale. Must be called before <code>enterItem()</code>. 

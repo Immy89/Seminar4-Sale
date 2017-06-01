@@ -40,7 +40,6 @@ public class Controller {
      * @param quantity       The quantity of items to be entered.
      * @return               Information about the entered item.
      * @throws IllegalStateException If this method is called before makeNewSale().
-     * TODO - @throws ItemIdDoesNotExistException If itemId does not exist.
      */
     public ProductSpecification enterItem(int itemId, int quantity) throws ItemIdDoesNotExistException {
 	    if (sale == null) {

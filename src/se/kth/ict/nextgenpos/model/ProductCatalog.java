@@ -30,6 +30,11 @@ public class ProductCatalog implements IObservable{
 		return products.values();
 	}
 
+	/**
+	 * Adds new product to the productCatalog.
+	 *
+	 * @param productToAdd the productSpecification of the product to add.
+	 */
 	public void addProduct(ProductSpecification productToAdd){
 		products.put(++counter, productToAdd);
 		for (IObserver observer:observers) {

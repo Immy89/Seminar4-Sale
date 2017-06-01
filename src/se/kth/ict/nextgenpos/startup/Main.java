@@ -2,7 +2,6 @@ package se.kth.ict.nextgenpos.startup;
 
 import se.kth.ict.nextgenpos.controller.Controller;
 import se.kth.ict.nextgenpos.model.ItemIdDoesNotExistException;
-import se.kth.ict.nextgenpos.model.ProductSpecification;
 import se.kth.ict.nextgenpos.view.View;
 
 import java.io.IOException;

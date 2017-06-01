@@ -38,7 +38,11 @@ public class View implements IObserver{
 		enterItem(10);
     }
 
-
+    /**
+     * Adds an item to shoppingkart. If item don't exist throws an ItemIdDoesNotExistException.
+     *
+     * @param itemId Id of the product to add to your shoppingkart.
+     */
     private void enterItem(int itemId) {
 		try{
 			int quantity = 1;

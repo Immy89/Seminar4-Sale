@@ -1,0 +1,9 @@
+<keymap version="1" name="Visual Studio copy" parent="Visual Studio">
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="ctrl slash" />
+    <keyboard-shortcut first-keystroke="ctrl divide" />
+    <keyboard-shortcut first-keystroke="ctrl colon" />
+    <keyboard-shortcut first-keystroke="shift ctrl 7" />
+  </action>
+  <action id="ToggleBookmark7" />
+</keymap>

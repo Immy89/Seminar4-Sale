@@ -1,0 +1,5 @@
+<application>
+  <component name="EditorSettings">
+    <option name="QUICK_DOC_ON_MOUSE_OVER_DELAY_MS" value="200" />
+  </component>
+</application>
